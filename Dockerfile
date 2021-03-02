@@ -52,10 +52,6 @@ RUN dotnet_sdk_version=5.0.101 \
     # Trigger first run experience by running arbitrary cmd
     && dotnet help
 
-# Copy notebooks
-
-COPY ./notebooks/ ${HOME}/notebooks/
-
 # Copy package sources
 
 COPY ./NuGet.config ${HOME}/nuget.config
@@ -67,10 +63,10 @@ USER ${USER}
 RUN pip install nteract_on_jupyter
 
 # Install lastest build from master branch of Microsoft.DotNet.Interactive
-RUN dotnet tool install -g Microsoft.dotnet-interactive --add-source "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json"
+#RUN dotnet tool install -g Microsoft.dotnet-interactive --add-source "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json"
 
 #latest stable from nuget.org
-#RUN dotnet tool install -g Microsoft.dotnet-interactive --add-source "https://api.nuget.org/v3/index.json"
+RUN dotnet tool install -g Microsoft.dotnet-interactive --version 1.0.210803 --add-source "https://api.nuget.org/v3/index.json"
 
 ENV PATH="${PATH}:${HOME}/.dotnet/tools"
 RUN echo "$PATH"
