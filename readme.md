@@ -37,6 +37,21 @@ Jupyter サーバーが起動したのを確認して
 
 のページを開いてください。
 
+work ディレクトリの中に データと Jupyter Notebook のファイルが入っています。
+
+work ディレクトリは git で clone した フォルダの中の work ディレクトリを 参照しています。
+
+Docker 環境がなくても WEB ブラウザだけで 実行する事が可能です。
+
+[Binder](https://mybinder.org/) の WEB サイトに登録しているので
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kkato233/100knocks-data-scientist-cs/HEAD)
+
+をクリックして ブラウザを開くと
+
+notebook ディレクトリの中に データファイルと Jupyter Notebook のファイルが入っています。
+
+
 ## 効率的な開発環境構築
 
 Web ブラウザ上で Jupyter Notebook の スクリプト編集は面倒です。

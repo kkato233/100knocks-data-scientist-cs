@@ -52,6 +52,10 @@ RUN dotnet_sdk_version=5.0.101 \
     # Trigger first run experience by running arbitrary cmd
     && dotnet help
 
+# Copy notebooks
+
+COPY ./work/ ${HOME}/notebooks/
+
 # Copy package sources
 
 COPY ./NuGet.config ${HOME}/nuget.config
