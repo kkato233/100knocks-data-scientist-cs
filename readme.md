@@ -61,7 +61,7 @@ Web ブラウザ上で Jupyter Notebook の スクリプト編集は面倒です
 [.NET Interactive Notebooks](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode)
 パッケージを追加し
 
-[.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+[.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 を インストールすると
 
 Visual Studio Code で サクサク開発ができます。
