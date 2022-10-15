@@ -15,7 +15,15 @@ https://github.com/The-Japan-DataScientist-Society/100knocks-preprocess
 - データサイエンス100本ノック(構造化データ加工編)の利用に関するご質問等について、個別での対応は受けかねますので予めご了承ください
 - また、データサイエンス100本ノック(構造化データ加工編)の利用により生じるいかなる問題についても、当協会（訳注:データサイエンス協会）は一切の責任を負いかねますのであらかじめご了承ください。
 
-## 環境構築手順
+## 実行結果の表示
+
+下記のリンクをクリックすると C# で実行した結果が表示されます。
+
+（※ なぜか表示できない場合もありますが・・）
+
+[実行結果（回答を含む）](./work/ans_preprocess_knock_CS.ipynb)
+
+## Docker Desktop での開発手順
 
 [Docker Desktop](https://docs.docker.com/docker-for-windows/install/) と [git](https://git-scm.com/download/win) を インストールします。
 
@@ -41,6 +49,8 @@ work ディレクトリの中に データと Jupyter Notebook のファイル�
 
 work ディレクトリは git で clone した フォルダの中の work ディレクトリを 参照しています。
 
+## WEB ブラウザだけで 開発 (Binder を利用)
+
 Docker 環境がなくても WEB ブラウザだけで 実行する事が可能です。
 
 [Binder](https://mybinder.org/) の WEB サイトに登録しているので
@@ -51,20 +61,19 @@ Docker 環境がなくても WEB ブラウザだけで 実行する事が可能�
 
 notebook ディレクトリの中に データファイルと Jupyter Notebook のファイルが入っています。
 
-
-## 効率的な開発環境構築
+## Visual Studio Code を使って効率的に開発
 
 Web ブラウザ上で Jupyter Notebook の スクリプト編集は面倒です。
 
 [Visual Studio Code](https://code.visualstudio.com/) をインストールし、
 
-[.NET Interactive Notebooks](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode)
-パッケージを追加し
-
 [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
-を インストールすると
+を インストールして
 
-Visual Studio Code で サクサク開発ができます。
+[.NET Interactive Notebooks](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-interactive-vscode)
+パッケージを追加すると
+
+Visual Studio Code で サクサク開発することができるようになります。
 
 ![編集画像](./img/edit01.gif)
 
