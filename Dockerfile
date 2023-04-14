@@ -1,4 +1,4 @@
-FROM jupyter/base-notebook:ubuntu-20.04
+FROM jupyter/base-notebook:ubuntu-22.04
 
 # Install .NET CLI dependencies
 
@@ -14,10 +14,8 @@ USER root
 RUN apt-get update
 RUN apt-get install -y curl
 
-RUN wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb \
-    && dpkg -i packages-microsoft-prod.deb \
-    && apt-get update \
-    && apt-get install -y dotnet-sdk-6.0
+# install dotnet sdk 6.0
+RUN apt-get install -y dotnet-sdk-6.0
 
 # Copy notebooks
 
