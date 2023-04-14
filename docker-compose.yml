@@ -8,9 +8,9 @@ services:
     image: dotnet-jupyter-notebook
     container_name: 100knocks-data-scientist-cs
     ports:
-      - "8889:8888"
+      - "8888:8888"
     environment:
       - JUPYTER_ENABLE_LAB=yes
     volumes:
       - ./work:/home/jovyan/work
-    command: start-notebook.sh --NotebookApp.token=''
+    command: start-notebook.sh
