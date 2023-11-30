@@ -12,18 +12,17 @@ WORKDIR ${HOME}
 
 USER root
 RUN apt-get update
-RUN apt-get install -y curl
 
-# install dotnet sdk 6.0
-RUN apt-get install -y dotnet-sdk-6.0
+# install dotnet sdk 7.0
+RUN apt-get install -y wget libicu70
+RUN wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
+RUN chmod +x ./dotnet-install.sh 
+RUN ./dotnet-install.sh --channel 7.0 -InstallDir /usr/share/dotnet
+ENV DOTNET_ROOT=/usr/share/dotnet
+ENV PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
 # Copy notebooks
-
 COPY ./work/ ${HOME}/notebooks/
-
-# Copy package sources
-
-COPY ./NuGet.config ${HOME}/nuget.config
 
 RUN chown -R ${NB_UID} ${HOME}
 USER ${USER}
@@ -35,7 +34,7 @@ RUN pip install nteract_on_jupyter
 #RUN dotnet tool install -g Microsoft.dotnet-interactive --add-source "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json"
 
 #latest stable from nuget.org
-RUN dotnet tool install -g Microsoft.dotnet-interactive --version 1.0.355307
+RUN dotnet tool install -g Microsoft.dotnet-interactive --version 1.0.456201
 
 ENV PATH="${PATH}:${HOME}/.dotnet/tools"
 RUN echo "$PATH"
