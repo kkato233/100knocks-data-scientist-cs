@@ -41,7 +41,7 @@ PostgreSQL の環境は構築していません。
 
 Jupyter サーバーが起動したのを確認して
 
-`http://localhost:8889`
+`http://localhost:8888`
 
 のページを開いてください。
 
