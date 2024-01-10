@@ -41,25 +41,42 @@ PostgreSQL の環境は構築していません。
 
 Jupyter サーバーが起動したのを確認して
 
-`http://localhost:8888`
+[http://localhost:8888](http://localhost:8888)
 
 のページを開いてください。
 
+すると 下図のような `Password or token:` を聞く画面が表示されます。
+
+![Password or token](img/password_or_token.png)
+
+コマンドプロンプトで
+```
+docker exec -it dotnet-jupyter-notebook jupyter server list
+```
+を実行して
+そこに表示される
+```
+ http://f4080fa72e6a:8888/?token=c8de56fa...
+```
+の `?token=` の後の英数字を コピー＆ペーストして 「Log in」します。
+
+すると Jupyter Notebook の画面が開きます。
+
+![jupyter-notebookの画面](img/jupyter-notebook.png)
+
 work ディレクトリの中に データと Jupyter Notebook のファイルが入っています。
 
-work ディレクトリは git で clone した フォルダの中の work ディレクトリを 参照しています。
+work ディレクトリは git で clone した フォルダの中の work ディレクトリを 書き込みモードで参照しています。
 
 ## WEB ブラウザだけで 開発 (Binder を利用)
 
 Docker 環境がなくても WEB ブラウザだけで 実行する事が可能です。
 
-[Binder](https://mybinder.org/) の WEB サイトに登録しているので
-
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/kkato233/100knocks-data-scientist-cs/HEAD)
 
-をクリックして ブラウザを開くと
+をクリックして ブラウザを開くと Jupyter Notebook が利用可能です。
 
-notebook ディレクトリの中に データファイルと Jupyter Notebook のファイルが入っています。
+notebook ディレクトリの中に データファイルと Jupyter Notebook ファイルが入っています。
 
 ## Visual Studio Code を使って効率的に開発
 
