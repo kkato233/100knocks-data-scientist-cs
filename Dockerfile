@@ -17,7 +17,7 @@ RUN apt-get update
 RUN apt-get install -y wget libicu70
 RUN wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
 RUN chmod +x ./dotnet-install.sh 
-RUN ./dotnet-install.sh --channel 7.0 -InstallDir /usr/share/dotnet
+RUN ./dotnet-install.sh --channel 8.0 -InstallDir /usr/share/dotnet
 ENV DOTNET_ROOT=/usr/share/dotnet
 ENV PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
 
@@ -34,7 +34,7 @@ RUN pip install nteract_on_jupyter
 #RUN dotnet tool install -g Microsoft.dotnet-interactive --add-source "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-tools/nuget/v3/index.json"
 
 #latest stable from nuget.org
-RUN dotnet tool install -g Microsoft.dotnet-interactive --version 1.0.456201
+RUN dotnet tool install -g Microsoft.dotnet-interactive --version 1.0.505402
 
 ENV PATH="${PATH}:${HOME}/.dotnet/tools"
 RUN echo "$PATH"
