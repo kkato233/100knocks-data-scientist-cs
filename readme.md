@@ -51,7 +51,7 @@ Jupyter サーバーが起動したのを確認して
 
 コマンドプロンプトで
 ```
-docker exec -it dotnet-jupyter-notebook jupyter server list
+docker exec -it 100knocks-data-scientist-cs jupyter server list
 ```
 を実行して
 そこに表示される
