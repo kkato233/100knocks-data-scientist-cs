@@ -20,8 +20,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				// dotnet 7.0 の場合 1.0.3611020
-				"ms-dotnettools.dotnet-interactive-vscode@1.0.3611020"
+				// dotnet 8.0 の場合 1.0.4627011
+				"ms-dotnettools.dotnet-interactive-vscode@1.0.4627011"
 			]
 		}
 	}
