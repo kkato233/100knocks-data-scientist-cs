@@ -13,7 +13,7 @@ WORKDIR ${HOME}
 USER root
 RUN apt-get update
 
-# install dotnet sdk 7.0
+# install dotnet sdk 8.0
 RUN apt-get install -y wget libicu70
 RUN wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
 RUN chmod +x ./dotnet-install.sh 
