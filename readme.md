@@ -1,3 +1,12 @@
+
+## .NET Interactive will be deprecated April 24th, 2026
+
+本家の .NET Interactive は 今後は 削除される方針となったそうなので・・このサイトも更新しない方向性となります。
+
+https://github.com/dotnet/interactive?tab=readme-ov-file#net-interactive-will-be-deprecated-april-24th-2026
+
+[お知らせ](https://github.com/dotnet/interactive/issues/4163)
+
 ## 概要
 
 データサイエンス 100 本ノック
